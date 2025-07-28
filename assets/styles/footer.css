@@ -1,0 +1,122 @@
+#footer {
+    background-color: #222; /* Darker background for footer */
+    color: #f8f9fa; /* Light text color */
+    padding: 60px 0 30px; /* More padding at the top */
+    font-size: 0.9em;
+}
+
+#footer .container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: center; /* Center items on smaller screens */
+    gap: 40px; /* Space between main footer sections and bottom section */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap */
+    justify-content: space-around; /* Distribute space */
+    width: 100%;
+    max-width: 1000px; /* Max width for footer content */
+    gap: 30px; /* Space between columns */
+    text-align: center; /* Default align text center for mobile */
+}
+
+.footer-brand,
+.footer-links,
+.footer-social {
+    flex: 1 1 250px; /* Allows items to grow/shrink, min-width 250px */
+    padding: 0 15px;
+}
+
+.footer-brand .footer-logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-brand .tagline {
+    font-size: 1em;
+    color: #bbb;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #007bff; /* Accent color for headings */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #007bff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center social icons on mobile */
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 35px; /* Size of social icons */
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444; /* Separator line */
+    width: 100%;
+    text-align: center;
+    color: #bbb;
+    font-size: 0.85em;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+    #footer .container {
+        flex-direction: column; /* Ensure main container remains column */
+    }
+
+    .footer-content {
+        text-align: left; /* Align text left on larger screens */
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-social {
+        flex: 1; /* Distribute space more evenly */
+    }
+
+    .social-icons {
+        justify-content: flex-start; /* Align social icons left */
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-content {
+        justify-content: space-between; /* Evenly space columns */
+    }
+}
